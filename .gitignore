@@ -23,3 +23,5 @@
 *.zip
 *.tar.gz
 *.rar
+/build/
+/dist/
