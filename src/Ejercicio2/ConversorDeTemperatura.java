@@ -35,11 +35,11 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         CuadroIngreso = new javax.swing.JTextField();
         TextoLabel = new javax.swing.JLabel();
-        tituloLabel = new javax.swing.JLabel();
         botonFahren = new javax.swing.JRadioButton();
         botonKelvin = new javax.swing.JRadioButton();
         botonRadianes = new javax.swing.JRadioButton();
         botonConvertir = new javax.swing.JButton();
+        tituloLabel = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -60,19 +60,19 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
             }
         });
 
-        TextoLabel.setText("Ingrese temperatura en grados Celsius");
-
-        tituloLabel.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        tituloLabel.setText("Conversor de Temperatura");
-        tituloLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        TextoLabel.setText("Ingrese la Temperatura en Grados Celsius");
 
         botonFahren.setText("Fahrenheit");
 
         botonKelvin.setText("Kelvin");
 
         botonRadianes.setText("Radianes");
+        botonRadianes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRadianesActionPerformed(evt);
+            }
+        });
 
-        botonConvertir.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Desktop\\output-onlinepngtools.png")); // NOI18N
         botonConvertir.setText("Convertir");
         botonConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,37 +80,35 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
             }
         });
 
+        tituloLabel.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        tituloLabel.setText("Conversor de Temperatura");
+        tituloLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(botonRadianes))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(TextoLabel)))
+                .addGap(57, 57, 57)
+                .addComponent(TextoLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tituloLabel)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(botonFahren)
-                                .addGap(31, 31, 31)
-                                .addComponent(botonKelvin)))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(CuadroIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119))))
+                .addGap(0, 23, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(botonFahren)
+                        .addGap(40, 40, 40)
+                        .addComponent(botonKelvin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonRadianes))
+                    .addComponent(tituloLabel))
+                .addGap(21, 21, 21))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(botonConvertir)
-                .addGap(108, 108, 108))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botonConvertir)
+                    .addComponent(CuadroIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(118, 118, 118))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,16 +117,16 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
                 .addComponent(tituloLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TextoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(CuadroIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonFahren)
                     .addComponent(botonKelvin)
-                    .addComponent(botonRadianes))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                    .addComponent(botonRadianes)
+                    .addComponent(botonFahren))
+                .addGap(18, 18, 18)
                 .addComponent(botonConvertir)
-                .addGap(28, 28, 28))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         jDesktopPane2.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -137,17 +135,17 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
         jDesktopPane2.setLayout(jDesktopPane2Layout);
         jDesktopPane2Layout.setHorizontalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane2Layout.createSequentialGroup()
+                .addContainerGap(68, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addGap(65, 65, 65))
         );
         jDesktopPane2Layout.setVerticalGroup(
             jDesktopPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane2Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addGap(30, 30, 30)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -172,6 +170,10 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
     private void botonConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConvertirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonConvertirActionPerformed
+
+    private void botonRadianesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRadianesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonRadianesActionPerformed
 
     /**
      * @param args the command line arguments
