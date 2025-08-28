@@ -4,6 +4,8 @@
  */
 package Ejercicio2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan
@@ -65,6 +67,11 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
         botonFahren.setText("Fahrenheit");
 
         botonKelvin.setText("Kelvin");
+        botonKelvin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonKelvinActionPerformed(evt);
+            }
+        });
 
         botonRadianes.setText("Radianes");
         botonRadianes.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +181,12 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
     private void botonRadianesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRadianesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonRadianesActionPerformed
+
+    private void botonKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonKelvinActionPerformed
+        double gradosKelvin = 273.15;
+        double gradosCelsius = Double.parseDouble(CuadroIngreso.getText());
+        double convertorDeGradosCelciusAKelvin = gradosCelsius + gradosKelvin;
+    }//GEN-LAST:event_botonKelvinActionPerformed
 
     /**
      * @param args the command line arguments
