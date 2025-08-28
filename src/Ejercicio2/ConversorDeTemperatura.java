@@ -15,6 +15,9 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
      */
     public ConversorDeTemperatura() {
         initComponents();
+        buttonGroup1.add(botonFahren);
+        buttonGroup1.add(botonKelvin);
+        buttonGroup1.add(botonRadianes);
     }
 
     /**
@@ -27,6 +30,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jDesktopPane2 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         CuadroIngreso = new javax.swing.JTextField();
@@ -210,6 +214,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
     private javax.swing.JRadioButton botonFahren;
     private javax.swing.JRadioButton botonKelvin;
     private javax.swing.JRadioButton botonRadianes;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JPanel jPanel1;
