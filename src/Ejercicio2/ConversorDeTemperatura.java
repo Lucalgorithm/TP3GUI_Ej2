@@ -4,6 +4,8 @@
  */
 package Ejercicio2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan
@@ -33,7 +35,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
         grupoBotones = new javax.swing.ButtonGroup();
         jDesktopPane2 = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
-        CuadroIngreso = new javax.swing.JTextField();
+        jtCelcius = new javax.swing.JTextField();
         TextoLabel = new javax.swing.JLabel();
         botonFahren = new javax.swing.JRadioButton();
         botonKelvin = new javax.swing.JRadioButton();
@@ -54,15 +56,21 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        CuadroIngreso.addActionListener(new java.awt.event.ActionListener() {
+        jtCelcius.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CuadroIngresoActionPerformed(evt);
+                jtCelciusActionPerformed(evt);
             }
         });
 
+        TextoLabel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         TextoLabel.setText("Ingrese la Temperatura en Grados Celsius");
 
         botonFahren.setText("Fahrenheit");
+        botonFahren.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonFahrenActionPerformed(evt);
+            }
+        });
 
         botonKelvin.setText("Kelvin");
 
@@ -107,7 +115,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(botonConvertir)
-                    .addComponent(CuadroIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtCelcius, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(118, 118, 118))
         );
         jPanel1Layout.setVerticalGroup(
@@ -118,7 +126,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(TextoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(CuadroIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtCelcius, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonKelvin)
@@ -163,17 +171,29 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CuadroIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CuadroIngresoActionPerformed
+    private void jtCelciusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtCelciusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CuadroIngresoActionPerformed
+    }//GEN-LAST:event_jtCelciusActionPerformed
 
     private void botonConvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConvertirActionPerformed
-        // TODO add your handling code here:
+        try {
+            if(botonFahren.isSelected()) {
+            double temperatura = Double.parseDouble(jtCelcius.getText());
+            temperatura = (temperatura * 9/5) + 32;
+            JOptionPane.showMessageDialog(null, "La Temperatura en Fahrenheit es: " + temperatura);
+            } 
+        } catch(NumberFormatException nfe1) {
+            JOptionPane.showMessageDialog(this, "El formato ingresado es incorrecto, Debe ingresar numeros.");
+        }
     }//GEN-LAST:event_botonConvertirActionPerformed
 
     private void botonRadianesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRadianesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonRadianesActionPerformed
+
+    private void botonFahrenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFahrenActionPerformed
+        
+    }//GEN-LAST:event_botonFahrenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,7 +231,6 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField CuadroIngreso;
     private javax.swing.JLabel TextoLabel;
     private javax.swing.JButton botonConvertir;
     private javax.swing.JRadioButton botonFahren;
@@ -221,6 +240,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jtCelcius;
     private javax.swing.JLabel tituloLabel;
     // End of variables declaration//GEN-END:variables
 }
