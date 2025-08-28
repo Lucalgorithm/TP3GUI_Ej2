@@ -103,7 +103,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="botonConvertir" min="-2" max="-2" attributes="0"/>
-                          <Component id="CuadroIngreso" min="-2" pref="95" max="-2" attributes="0"/>
+                          <Component id="jtCelcius" min="-2" pref="95" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
                   </Group>
@@ -117,7 +117,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="TextoLabel" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="CuadroIngreso" min="-2" max="-2" attributes="0"/>
+                      <Component id="jtCelcius" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="botonKelvin" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -132,13 +132,16 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="CuadroIngreso">
+            <Component class="javax.swing.JTextField" name="jtCelcius">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CuadroIngresoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtCelciusActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="TextoLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="12" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ingrese la Temperatura en Grados Celsius"/>
               </Properties>
             </Component>
@@ -146,6 +149,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fahrenheit"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonFahrenActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JRadioButton" name="botonKelvin">
               <Properties>
