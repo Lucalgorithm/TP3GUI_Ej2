@@ -85,6 +85,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
             }
         });
 
+        botonConvertir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Ejercicio2/iconos/output-onlinepngtools.png"))); // NOI18N
         botonConvertir.setText("Convertir");
         botonConvertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,7 +158,7 @@ public class ConversorDeTemperatura extends javax.swing.JFrame {
             .addGroup(jDesktopPane2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
