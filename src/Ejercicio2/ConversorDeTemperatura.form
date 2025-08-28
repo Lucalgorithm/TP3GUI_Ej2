@@ -17,7 +17,7 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="javax.swing.ButtonGroup" name="grupoBotones">
+    <Component class="javax.swing.ButtonGroup" name="bgBotones">
     </Component>
   </NonVisualComponents>
   <Properties>
